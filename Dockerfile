@@ -57,7 +57,8 @@ RUN cd /opt && \
     python setup.py build
 
 # Add more profiles
-COPY volatility-profiles/* /opt/volatility/volatility/plugins/overlays/linux/
+COPY volatility-profiles/linux/* /opt/volatility/volatility/plugins/overlays/linux/
+COPY volatility-profiles/mac/* /opt/volatility/volatility/plugins/overlays/mac/
 
 # Cleanup
 RUN apt-get clean
